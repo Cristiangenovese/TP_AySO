@@ -1,66 +1,55 @@
-ls -l 
-cd Home
-cd /home
-ls -l 
-cd vagrant/
-ll
-ssh-keygen -t ed25519
-ll
-cd .ssh
-ll
-cat $HOME/.ssh/*.pub
-cd ..
 pwd
-mkdir repogit
-cd repogit
-git clone git@github.com:Cristiangenovese/TP_AySO.git
+git clone https://github.com/Cristiangenovese/TP_AySO.git
+pwd
 ll
 cd TP_AySO/
-ls -l
 ll
+cd
+rm -rf TP_AySO/
+lll
+ll
+cd repogit
+ll
+cd
+rm -rf repogit/
+mkdir repogit
+cd repogit
+git clone https://github.com/Cristiangenovese/TP_AySO.git
+ll
+ssh-keygen -t ed25519
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git add .
+ll
+cd TP_AySO/
 cat /etc/os-release
 man grep
-grep -i  HOME /etc/os-release 
-grep -i  home /etc/os-release 
-grep   home /etc/os-release 
-grep   HOME /etc/os-release 
-whoami
-echo "Usuario=$(whoami)" > datos_usuario.txt
-ll
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt
 nano datos_usuario.txt
-git add.
-git add
-git add .
-git config --global cristiangenovese96@gmail.com
-git config --global user.mail "cristiangenovese96@gmail.com
-git config --global user.mail "cristiangenovese96@gmail.com"
-git config --global user.name "CristianGenovese+"
-git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
-git config --global user.name "CristianGenovese"
-git config --global user.mail "cristiangenovese96@gmail.com"
-git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
-git config --global user.name "Cristiangenovese"
-git config --global user.mail "cristiangenovese96@gmail.com"
-git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
-ping 8.8.8.8
-git config --global user.name "Cristian Genovese"
-git config --global user.mail "cristiangenovese96@gmail.com"
-git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git add datos_usuario.txt 
+git commit -m "ADD: archivo datos de usuario actualizado"
 git config --global user.email "cristiangenovese96@gmail.com"
-git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
-git status
+git config --global user.name "Cristiangenovese"
 git push
-ll
+git remote -v
+git remote set-url origin git@github.com:Cristiangenovese/TP_AySO.git
+ssh -T git@github.com
+git push
+git add datos_usuario.txt 
+git commit -m "ADD: archivo datos de usuario actualizado"
+git push
 cat << EOF >> README.md
-Alumno:Guille
-Division:315 Turno:Noche
+Alumno: Cristian
+Division: 318
+Turno: Noche
 EOF
 
-git add README.md datos_usuario.txt
-git commit -m "ADD: Añadiendo Readme y datos de usuario"
+cat README.md 
+nano README.md
+git add
+git add README.md datos_usuario.txt 
+git commit -m "ADD: Arreglo del reamde y datos de usuario por si acaso"
 git push
 history -a
-$HOME/.bash_history
-sudo $HOME/.bash_history
-history
-history -a
+cp ssh -T git@github.com
+cp ~/bash_history ./Historial_comandos_Cristian.txt
